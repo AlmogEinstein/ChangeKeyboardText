@@ -1,20 +1,22 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  width: 300px;
-  padding: 16px;
+  gap: 12px;
+  width: 420px;
+  padding: 24px;
   box-sizing: border-box;
 }
 label {
   font-weight: bold;
+  font-size: 1.2em;
 }
 textarea {
   width: 100%;
   resize: none;
-  font-size: 1em;
-  padding: 6px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+  font-size: 1.3em;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1.5px solid #bbb;
   box-sizing: border-box;
+  min-height: 60px;
 } 
