@@ -5,6 +5,25 @@
   width: 420px;
   padding: 24px;
   box-sizing: border-box;
+  position: relative;
+}
+.color-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 8px;
+  position: static;
+  left: unset;
+  bottom: unset;
+}
+select#colorSelect {
+  font-size: 0.95em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  width: auto;
+  min-width: 70px;
+  margin: 0;
 }
 label {
   font-weight: bold;

@@ -83,6 +83,38 @@ function convertText(text, direction) {
 document.addEventListener('DOMContentLoaded', () => {
   const input = document.getElementById('inputText');
   const output = document.getElementById('outputText');
+  const colorSelect = document.getElementById('colorSelect');
+  const labels = document.querySelectorAll('label');
+
+  // Restore color from chrome.storage.local
+  function setLabelColor(color) {
+    labels.forEach(label => {
+      label.style.color = color;
+    });
+  }
+
+  if (window.chrome && chrome.storage && chrome.storage.local) {
+    chrome.storage.local.get(['fontColor'], (result) => {
+      const color = result.fontColor || 'black';
+      colorSelect.value = color;
+      setLabelColor(color);
+    });
+  } else {
+    // Fallback for non-extension environments
+    const color = localStorage.getItem('fontColor') || 'black';
+    colorSelect.value = color;
+    setLabelColor(color);
+  }
+
+  colorSelect.addEventListener('change', () => {
+    const color = colorSelect.value;
+    setLabelColor(color);
+    if (window.chrome && chrome.storage && chrome.storage.local) {
+      chrome.storage.local.set({ fontColor: color });
+    } else {
+      localStorage.setItem('fontColor', color);
+    }
+  });
 
   input.addEventListener('input', () => {
     const value = input.value;
