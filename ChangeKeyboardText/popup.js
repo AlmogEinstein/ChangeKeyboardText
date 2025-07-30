@@ -86,6 +86,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const colorSelect = document.getElementById('colorSelect');
   const labels = document.querySelectorAll('label');
 
+  // Autofocus on input textarea
+  input.focus();
+
   // Restore color from chrome.storage.local
   function setLabelColor(color) {
     labels.forEach(label => {
