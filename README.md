@@ -7,6 +7,7 @@ This Chrome extension allows users to input text in either English or Hebrew. Th
 - Textbox for user input (supports both English and Hebrew)
 - Automatic language detection
 - Second textbox displays the converted text in the other language
+- Press Ctrl+Q to quickly access the extension
 - Simple, user-friendly interface
 
 ## Example Usage
@@ -14,6 +15,5 @@ This Chrome extension allows users to input text in either English or Hebrew. Th
 - User types "שצשזןמע" (in Hebrew) → Output: "amazing" (in English)
 
 ## Future Enhancements
-- Keyboard shortcut for quick conversion
 - Improved UI/UX
 - Auto conversion of selected textbox in site
